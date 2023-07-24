@@ -13,36 +13,25 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                color: Colors.red,
-                width: 100.0
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                      color: Colors.yellow,
-                      width: 100.0,
-                      height: 100.0
+            // Containers can only have single child
+            child: Column(
+              children: [
+                CircleAvatar(
+                  radius: 50.0,
+                  foregroundImage: AssetImage('images/stuart_pinchen_profile.jpg')
                   ),
-                  Container(
-                      color: Colors.green,
-                      width: 100.0,
-                      height: 100.0
+                Text(
+                    "Stuart Pinchen",
+                  style: TextStyle(
+                    fontFamily: 'Pacifico',
+                    fontSize: 24.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold
                   ),
-                ],
-              ),
-              Container(
-                  color: Colors.blue,
-                  width: 100.0
-              )
-            ],
-          ),
-        )
+                )
+              ],
+            ),
+        ),
       ),
     );
   }
