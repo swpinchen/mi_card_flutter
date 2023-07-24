@@ -14,16 +14,23 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
             // Containers can only have single child
-            child: Container(
-              height: 100.0,
-              width: 100.0,
-              // margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-              // margin: EdgeInsets.fromLTRB(30, 10, 50, 20),
-              margin: EdgeInsets.only(left: 30),
-              padding: EdgeInsets.all(20.0),
-              color: Colors.white,
-              child: Text('Hello'),
-            )
+            child: Column(
+              children: [
+                CircleAvatar(
+                  radius: 50.0,
+                  foregroundImage: AssetImage('images/stuart_pinchen_profile.jpg')
+                  ),
+                Text(
+                    "Stuart Pinchen",
+                  style: TextStyle(
+                    fontFamily: 'Pacifico',
+                    fontSize: 24.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold
+                  ),
+                )
+              ],
+            ),
         ),
       ),
     );
