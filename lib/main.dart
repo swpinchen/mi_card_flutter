@@ -36,3 +36,12 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+// Container(
+// height: 100.0,
+// width: 100.0,
+// margin: EdgeInsets.only(left: 30),
+// padding: EdgeInsets.all(20.0),
+// color: Colors.white,
+// child: Text('Hello'),
+// )
