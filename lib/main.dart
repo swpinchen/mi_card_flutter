@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
             // Containers can only have single child
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
                   radius: 50.0,
@@ -30,15 +31,63 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
                 Text(
-                    'Flutter Developer',
+                    'FLUTTER DEVELOPER',
                   style: TextStyle(
-                    fontFamily: 'SourceCodePro',
+                    fontFamily: 'Source Code Pro',
                     color: Colors.white,
-                    fontWeight: FontWeight.bold
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16.0
+                  )
+                ),
+                SizedBox(
+                  height: 20.0,
+                  width: double.infinity,
+                  child: Divider(
+                    color: Colors.teal.shade100,
+                    indent: 150.0,
+                    endIndent: 150.0
+                  ),
+                ),
+                Card(
+                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 40.0),
+                  elevation: 10,
+                  // color: Colors.white, - default
+                  child: ListTile(
+                    leading: Icon(
+                        Icons.phone,
+                        color: Colors.teal,
+                      ),
+                      title: Text(
+                          '+81(0)80-1234-5678',
+                          style: TextStyle(
+                          fontFamily: 'Source Code Pro',
+                          color: Colors.teal[900],
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16.0,
+                          )
+                      )
+                  )
+                ),
+                Card(
+                    margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 40.0),
+                    elevation: 10,
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.mail,
+                        color: Colors.teal,
+                      ),
+                      title: Text(
+                          'test@stuartpinchen.com',
+                          style: TextStyle(
+                            fontFamily: 'Source Code Pro',
+                            color: Colors.teal[900],
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16.0,
+                          )
+                    )
                   )
                 )
-
-              ],
+              ]
             ),
         ),
       ),
